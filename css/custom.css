@@ -72,14 +72,12 @@ a:hover{
 }
 .custom-button,.custom-button:hover,.custom-button:focus,.custom-button:active{
     color: #fff;
-    background-color: #F41F0D;
-    border-color: #F41F0D;
+    background-color: #3f51b5;
+    border-color: #3f51b5;
 }
 
 /*---------------------------------- Home ----------------------------------------*/
-#header{
-    border-top: 7px solid #F41F0D;
-}
+
 .header-navbar-custom {
     background-color: transparent!important;
     border-color: transparent!important;
@@ -98,7 +96,7 @@ a:hover{
     font-weight: bold;
 }
 .header-navbar-custom .navbar-nav > li > a{
-    color: #2e4251;
+    /*color: #2e4251;*/
 }
 .header-navbar-custom .navbar-nav > li > a:focus, .header-navbar-custom .navbar-nav > li > a:hover{
     color: #F41F0D;
@@ -107,10 +105,56 @@ a:hover{
     background-color: transparent!important;
 }
 .navbar-toggle-custom, .navbar-toggle-custom:focus, .navbar-toggle-custom:hover, .navbar-toggle-custom:active, .navbar-toggle-custom:visited{
-    background: #2f4250!important;
+    background: #F41F0D!important;
 }
 .header-navbar-custom .navbar-toggle .icon-bar{
     background-color: #fff!important;
+}
+.nav-custom li{
+    background: #D8432B;
+    border-right: 2px solid #fff;
+}
+.nav-custom li a{
+    color: #fff!important;
+}
+
+.hvr-rectangle-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    background: #e1e1e1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.hvr-rectangle-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #3f51b5;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+    color: white;
+}
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .home-layout-bg{
@@ -145,18 +189,16 @@ a:hover{
 }
 
 .footer-wrapper{
-    background: #f1f1f1;
+    background: #D3D3D3;
     border-top: 1px solid #d3d3d3;
     box-shadow: inset 0 1px 5px 1px #d8d8d8;
     -webkit-box-shadow: inset 0 1px 5px 1px #d8d8d8;
 }
 /*---------------------------------- Company Profile ----------------------------------------*/
 #top-section {
-    background: #F41F0D;
     margin: 0 0 20px;
-    border: 1px solid #7e728a;
-    border-width: 1px 0 0 0;
-    color: #fff;
+    border-bottom: 1px solid #D3D3D3;
+    color: #F41F0D;
 }
 @media (max-width : 767px) {
     .home-layout-bg{
@@ -170,16 +212,16 @@ a:hover{
 }
 @media (max-width : 767px) {
     .navbar-collapse-custom{
-        background: #2f4250;
+        background: #F41F0D;
     }
     .header-navbar-custom .navbar-nav>.active>a, .header-navbar-custom .navbar-nav>.active>a:focus, .header-navbar-custom .navbar-nav>.active>a:hover{
-        color: #f41f0d!important;
-    }
-    .header-navbar-custom .navbar-nav > li > a{
         color: #fff!important;
     }
+    .header-navbar-custom .navbar-nav > li > a{
+        color: #333!important;
+    }
     .header-navbar-custom .navbar-nav > li > a:focus, .header-navbar-custom .navbar-nav > li > a:hover{
-        color: #F41F0D!important;
+        color: #fff!important;
     }
     .home-layout-margin-align{
         margin-top: 20px; 
@@ -192,7 +234,7 @@ a:hover{
         padding: 7px!important;
     }
     .home-layout-bg{
-        height: 300px;
+        height: 350px;
     }
     .home-layout-margin-align{
         margin-top: 60px; 
@@ -201,7 +243,7 @@ a:hover{
 }
 @media (min-width : 992px) and (max-width : 1199px) {
     .home-layout-bg{
-        height: 300px;
+        height: 350px;
     }
     .home-layout-margin-align{
         margin-top: 60px; 
@@ -210,7 +252,7 @@ a:hover{
 }
 @media (min-width : 1200px) {
     .home-layout-bg{
-        height: 300px;
+        height: 350px;
     }
     .home-layout-margin-align{
         margin-top: 60px; 
